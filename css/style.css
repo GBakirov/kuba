@@ -1,0 +1,183 @@
+/* 1.FONTS */
+/* 2.General Styles */
+/* 3.Container */
+/* 4.Header-top */
+@font-face {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../webfonts/Georgia.woff2') format('woff2'),
+       url('../webfonts/Georgia.woff') format('woff')
+}
+@font-face {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../webfonts/Georgia-Bold.woff2') format('woff2'),
+       url('../webfonts/Georgia-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../webfonts/lato-v17-latin-regular.woff2') format('woff2'),
+       url('../webfonts/lato-v17-latin-regular.woff') format('woff')
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../webfonts/lato-v17-latin-700.woff2') format('woff2'),
+       url('../webfonts/lato-v17-latin-700.woff') format('woff');
+}
+html{
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*::before,
+*::after{
+  box-sizing: border-box; 
+}
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Georgia";
+  font-size: 16px;
+  line-height: 28px;
+  color: #505050;
+}
+*:focus{
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(41, 80, 147, 0.4);
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/*Container*/
+.container{
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+} 
+/* Header-top */
+.site-header-top{
+  background: url("../img/background_img.png") no-repeat  center / contain;
+  background-size: cover;
+  height: 100vh;
+  padding: 40px;
+}
+.site-header-top__inner{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 2px solid #ECB84C;
+  border-bottom: none;
+  color: #fff;
+}
+.site-header-top__title{
+  margin: auto;
+  font-size: 200px;
+  line-height: 227px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  animation: animate 1s ease infinite forwards;
+}
+.site-header-top__text{
+  margin-bottom: -12px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 27px;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+}
+.site-header-top__text::after,
+.site-header-top__text::before{
+  width: 100%;
+  border-top: 2px solid #ECB84C;
+  content: "";
+}
+.site-header-top__text::after{
+  margin-left: 30px;
+}
+.site-header-top__text::before{
+  margin-right: 30px;
+}
+@media (max-width: 600px){
+  .site-header-top__title{
+    font-size: 100px;
+    line-height: 110px;
+  }
+  .site-header-top__text{
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: -9px;
+  }
+  .site-header-top__text::after{
+    margin-left: 25px;
+  }
+  .site-header-top__text::before{
+    margin-right: 25px;
+  }
+}
+@media (max-width: 430px){
+  .site-header-top__title{
+    font-size: 50px;
+    line-height: 55px;
+  }
+  .site-header-top__text{
+    line-height: 18px;
+    font-size:14px;
+    margin-bottom: -8px;
+  }
+  .site-header-top__text::after{
+    margin-left: 18px;
+  }
+  .site-header-top__text::before{
+    margin-right: 18px;
+  }
+}
+@media (max-width: 356px){
+  .site-header-top__text{
+    line-height: 16px;
+    font-size: 12px;
+    margin-bottom: -7px;
+  }
+  .site-header-top__text::after{
+    margin-left: 14px;
+  }
+  .site-header-top__text::before{
+    margin-right: 14px;
+  }
+  
+}
+@keyframes animate {
+  0%{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+  50%{
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 1);
+  }
+  100%{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+}
