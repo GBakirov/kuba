@@ -47,6 +47,7 @@ html{
   box-sizing: border-box; 
 }
 body{
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -253,6 +254,42 @@ img{
 .site-menu-item:active .site-menu-link,
 .site-menu-item--active{
   color: var(--main-color-);
+}
+/*LOADER*/
+.loading{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1em;
+  background: #2B3134;
+  color: #777;
+  text-align: center;
+  font-family: "Gill sans", sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader{
+  margin: 0 0 2em;
+  height: 150px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect{
+  fill: var(--main-color-);
 }
 @media (max-width: 600px){
   .site-header-top__title{
