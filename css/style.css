@@ -4,6 +4,7 @@
 /* 4.Header-top */
 :root{
   --main-color- : #ECB84C;
+  --main-title-color: #4E5665;
 }
 @font-face {
   font-family: 'Georgia';
@@ -77,7 +78,13 @@ img{
 /*Container*/
 .container{
   max-width: 1200px;
-  padding: 0 20px;
+  padding: 0 135px;
+  margin: 0 auto;
+}
+/* CONTENT */
+.content{
+  width: 100%;
+  padding: 0 100px;
   margin: 0 auto;
 } 
 /* Header-top */
@@ -288,6 +295,81 @@ svg path,
 svg rect{
   fill: var(--main-color-);
 }
+hr{
+  margin-bottom: 0 ;
+}
+/* MAIN CONTENT */
+.main-content{
+  flex-grow: 1;
+  margin: 80px 0;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+/* SITE-INFO */
+.site-info{
+  text-align: center;
+  padding-bottom: 80px;
+}
+.site-info__heading{
+  margin-bottom: 22px;
+  padding: 0;
+  font-size: 32px;
+  line-height: 38px;
+  font-family: 'Georgia';
+  font-weight: 400;
+  color: var(--main-title-color);
+}
+.site-info__text{
+  text-align: justify;
+}
+.site-info__read-more{
+  text-align: right;
+  font-weight: 700;
+}
+.site-info__link{
+  text-decoration: none;
+  color: var(--main-color-);
+}
+.site-info__link:hover span:nth-child(1){
+  animation: site-info__link 1s ease infinite forwards ;
+}
+.site-info__link:hover span:nth-child(2){
+  animation: site-info__link 1s ease infinite forwards ;
+  animation-delay: 0.5s;
+}
+.site-info__list{
+  margin: 0;
+  margin-top: 36px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.site-info__img{
+  margin-bottom: 32px;
+  transition: transform 1s ease;
+}
+.site-info__item:hover .site-info__img{
+  transform: scale(1.2);
+}
+.site-info__stat{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  color: #909090;
+}
+.site-info__number{
+  margin-bottom: 1px;
+  font-size: 22px;
+  line-height: 30px;
+  color: var(--main-title-color);
+}
 /* FOOTER */
 .site-footer{
   padding-top: 56px ;
@@ -299,7 +381,7 @@ svg rect{
 }
 .site-footer__top{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 0;
@@ -310,7 +392,7 @@ svg rect{
   font-size: 15px;
   line-height: 20px;
   font-weight: 700;
-  color: #4E5665;
+  color: var(--main-title-color);
 }
 .site-footer__list{
   margin: 0;
@@ -344,6 +426,27 @@ svg rect{
   margin-top: 40px;
   margin-bottom: 32px;
   text-align: center;
+}
+/* MEDIA-QUERY */
+@media (max-width: 1020px){
+  .content{
+    padding: 0;
+  }
+  .site-info__heading{
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 710px){
+  .container{
+    padding: 0 20px;
+  }
+  .site-info__img{
+    transform: scale(0.8);
+  }
+  .site-info__item:hover .site-info__img{
+    transform: scale(0.9);
+  }
 }
 @media (max-width: 600px){
   .site-header-top__title{
@@ -436,6 +539,40 @@ svg rect{
   .site-header-top__text::before{
     margin-right: 18px;
   }
+  .main-content{
+    margin: 40px 0;
+  }
+  .site-info{
+    padding-bottom: 15px;
+  }
+  .site-info__heading{
+    font-size: 18px;
+  }
+  .site-info__text{
+    font-size: 14px;
+  }
+  .site-info__list{
+    flex-direction: column;
+  }
+  .site-info__item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+  .site-info__item:not(:last-child){
+    margin-bottom: 15px;
+    border-bottom: 1px solid #909090;
+  }
+  .site-info__stat{
+    margin-left: 40px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .site-info__number{
+    margin-right: 15px;
+  }
 }
 @media (max-width: 356px){
   .site-header-top{
@@ -457,6 +594,19 @@ svg rect{
   }
   .site-footer__blog{
     width: 100%;
+  }
+}
+@media (max-width: 300px){
+  .site-info__item{
+    flex-direction: column;
+  }
+  .site-info__stat{
+    margin: 0;
+    margin-bottom: 10px;
+    flex-direction: column;
+  }
+  .site-info__number{
+    margin: 0;
   }
 }
 @keyframes animate {
@@ -484,5 +634,16 @@ svg rect{
   }
   to{
     transform: translateY(-120%);
+  }
+}
+@keyframes site-info__link{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
