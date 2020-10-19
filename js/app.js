@@ -6,5 +6,4 @@ $(document).ready(function(){
 		$(".site-menu").toggleClass('sitenav--close');
 
 	});
-
 });
