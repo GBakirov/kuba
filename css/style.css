@@ -130,16 +130,18 @@ img{
 /* Menu */
 .menu__toggler{
   position: fixed;
-  top: 0px;
+  top: 24px;
   right: 25px;
+  padding: 9px;
   display: none;
   z-index: 20;
+  background-color: var(--main-color-);
 }
 #nav-icon3 {
   width: 20px;
   height: 15px;
   position: relative;
-  margin: 17px auto;
+  margin: 0 auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -257,6 +259,9 @@ img{
 }
 /*LOADER*/
 .loading{
+  display: flex;
+  align-items: center;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -268,11 +273,7 @@ img{
   text-align: center;
   font-family: "Gill sans", sans-serif;
   width: 100%;
-  display: flex;
-  align-items: center;
-  height: 100vh;
 }
-
 .loader{
   margin: 0 0 2em;
   height: 150px;
