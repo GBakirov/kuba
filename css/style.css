@@ -527,6 +527,149 @@ hr{
 .site-about__first-blog--img{
   display: none;
 }
+/* CUBA-CAR */
+.cuba-car{
+  margin: 0;
+  margin-bottom: 80px;
+  padding-bottom: 81px;
+  border-bottom: 1px solid rgba(208, 212, 216, 0.5);
+}
+.cuba-car__title{
+  margin-bottom: 38px;
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: var(--main-title-color);
+}
+.cuba-car__info{
+  position: relative;
+  padding-top: 73px;
+}
+.cuba-car__info-dot{
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #FFD600;
+  animation: cuba-car 1.5s ease infinite forwards;
+  margin: 50px;
+}
+.cuba-car__info-dot:nth-child(1){
+  left: 120px;
+  top: 150px;
+}
+.cuba-car__info-dot:nth-child(2){
+  left: 400px;
+  top: 150px;
+}
+.cuba-car__info-dot:nth-child(3){
+  top: 100px;
+  right: 300px;
+}
+.cuba-car__info-dot:nth-child(4){
+  bottom: 20px;
+  right: 250px;
+}
+.cuba-car__info-dot--text{
+  position: absolute;
+  top: -122px;
+  left: 71px;
+  margin: 0;
+  width: 112px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  display: none;
+}
+.cuba-car__info-dot-text{
+  display: none;
+  position: absolute;
+  bottom: -50px;
+  left: 69px;
+  margin: 0;
+  width: 112px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+}
+.cuba-car__info-dot--text::after{
+  display: block;
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background-color: var(--main-color-);
+}
+.cuba-car__info-dot--text::before{
+  display: block;
+  content: '';
+  transform: rotate(-55deg);
+  position: absolute;
+  top: 72px;
+  left: -81px;
+  height: 1px;
+  width: 0;
+  background-color: var( --main-color-);
+}
+.cuba-car__info-dot-text::after{
+  display: block;
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background-color: var(--main-color-);
+}
+.cuba-car__info-dot-text::before{
+  display: block;
+    content: '';
+    transform: rotate(43deg);
+    position: absolute;
+    top: 4px;
+    left: -68px;
+    height: 1px;
+    width: 0;
+    background-color: var( --main-color-);
+}
+.cuba-car__info-dot:hover .cuba-car__info-dot--text,
+.cuba-car__info-dot:hover .cuba-car__info-dot-text{
+  display: block;
+}
+.cuba-car__info-dot:hover .cuba-car__info-dot--text::before{
+  animation: cuba-car_vetical  1s ease 1 forwards;
+}
+.cuba-car__info-dot:hover .cuba-car__info-dot-text::before{
+  animation: cuba-car_vetical2  1s ease 1 forwards;
+}
+.cuba-car__info-dot:hover .cuba-car__info-dot--text::after,
+.cuba-car__info-dot:hover .cuba-car__info-dot-text::after{
+  animation: cuba-car_gorizontal 1s ease 1 forwards;
+  animation-delay: 1s;
+}
+.cuba-car__info-img{
+  margin-bottom: 53px;
+}
+.cuba-car__info::after {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  z-index: 1;
+  display: block;
+  content: '';
+  background: url(../img/Car-shadow.png) no-repeat center / contain;
+}
+.cuba-car__text{
+  text-align: left;
+}
 /* FOOTER */
 .site-footer{
   padding-top: 56px ;
@@ -585,15 +728,21 @@ hr{
   text-align: center;
 }
 /* MEDIA-QUERY */
+@media (max-width: 1200px){
+  .cuba-car__info{
+    padding-top: 0;
+  }
+  .cuba-car__info-dot{
+    display: none;
+  }
+}
 @media (max-width: 1020px){
   .content{
     padding: 0;
   }
-  .site-info__heading{
-    font-size: 22px;
-    line-height: 24px;
-  }
-  .site-about__title{
+  .site-info__heading,
+  .site-about__title,
+  .cuba-car__title{
     font-size: 22px;
     line-height: 24px;
   }
@@ -756,7 +905,7 @@ hr{
 }
 @media (max-width: 430px){
   .site-header-top{
-    height: 90vh;
+    height: 95vh;
   }
   .site-header-top__title{
     font-size: 50px;
@@ -764,7 +913,7 @@ hr{
   }
   .site-header-top__text{
     line-height: 18px;
-    font-size:14px;
+    font-size: 14px;
     margin-bottom: -8px;
   }
   .site-header-top__text::after{
@@ -779,10 +928,14 @@ hr{
   .site-info{
     padding-bottom: 15px;
   }
-  .site-info__heading{
+  .site-info__heading,
+  .site-about__title,
+  .cuba-car__title{
     font-size: 18px;
   }
-  .site-info__text{
+  .site-info__text,
+  .site-about__text,
+  .cuba-car__text{
     font-size: 14px;
   }
   .site-info__list{
@@ -809,9 +962,6 @@ hr{
   }
 }
 @media (max-width: 356px){
-  .site-header-top{
-    height: 85vh;
-  }
   .site-header-top__text{
     line-height: 16px;
     font-size: 12px;
@@ -866,6 +1016,7 @@ hr{
     margin: 0;
   }
 }
+/* KEYFRAMES */
 @keyframes animate {
   0%{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -902,5 +1053,40 @@ hr{
   }
   100%{
     opacity: 1;
+  }
+}
+@keyframes cuba-car{
+  0%{
+    box-shadow: none;
+  }
+  50%{
+    box-shadow: 0 0 0 11px rgba(236, 184, 76, 0.75);
+  }
+  100%{
+    box-shadow: none;
+  }
+}
+@keyframes cuba-car_vetical {
+  from{
+    width: 0%;
+  }
+  to{
+    width: 92%;
+  }
+}
+@keyframes cuba-car_gorizontal {
+  from{
+    width: 0%;
+  }
+  to{
+    width: 110%;
+  }
+}
+@keyframes cuba-car_vetical2 {
+  from{
+    width: 0%;
+  }
+  to{
+    width: 70%;
   }
 }
