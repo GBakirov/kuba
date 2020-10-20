@@ -656,12 +656,12 @@ hr{
 .cuba-car__info-img{
   margin-bottom: 53px;
 }
-.cuba-car__info::after {
+.cuba-car__info::before {
   position: absolute;
-  bottom: 50px;
+  bottom: 55px;
   left: 0;
   width: 100%;
-  height: 10px;
+  height: 8px;
   z-index: 1;
   display: block;
   content: '';
