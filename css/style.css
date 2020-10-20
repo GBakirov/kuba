@@ -534,7 +534,8 @@ hr{
   padding-bottom: 81px;
   border-bottom: 1px solid rgba(208, 212, 216, 0.5);
 }
-.cuba-car__title{
+.cuba-car__title,
+.cuba-photo__title{
   margin-bottom: 38px;
   font-family: 'Georgia';
   font-weight: 400;
@@ -667,8 +668,55 @@ hr{
   content: '';
   background: url(../img/Car-shadow.png) no-repeat center / contain;
 }
-.cuba-car__text{
+.cuba-car__text,
+.cuba-photo__text{
   text-align: left;
+}
+/* CUBA-PHOTO */
+.cuba-photo__text{
+  padding-bottom: 48px;
+  position: relative;
+}
+.cuba-photo__divider{
+  width: 270px;
+  height: 1px;
+  margin: 0 auto;
+}
+.slider-photo{
+  width: 640px;
+  margin: 0 auto;
+  margin-top: 104px;
+  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.3);
+}
+.slider-photo__img{
+  width: 640px;
+  border-radius: 4px;
+  position: relative;
+}
+.slick-arrow{
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-color-); 
+  cursor: pointer;
+}
+.slick-arrow:focus{
+  box-shadow: none;
+}
+.slick-prev{
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.slick-next{
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 /* FOOTER */
 .site-footer{
@@ -750,7 +798,8 @@ hr{
   }
   .site-info__heading,
   .site-about__title,
-  .cuba-car__title{
+  .cuba-car__title,
+  .cuba-photo__title{
     font-size: 22px;
     line-height: 24px;
   }
@@ -903,12 +952,22 @@ hr{
   .site-about__first-blog-text{
     display: none;
   }
+  .slider-photo,
+  .slider-photo__img{
+    width: 440px;
+  }
   .site-footer__top{
     justify-content: space-between;
   }
   .site-footer__blog{
     width: 50%;
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 510px){
+  .slider-photo,
+  .slider-photo__img{
+    width: 340px;
   }
 }
 @media (max-width: 430px){
@@ -938,12 +997,14 @@ hr{
   }
   .site-info__heading,
   .site-about__title,
-  .cuba-car__title{
+  .cuba-car__title,
+  .cuba-photo__title{
     font-size: 18px;
   }
   .site-info__text,
   .site-about__text,
-  .cuba-car__text{
+  .cuba-car__text,
+  .cuba-photo__text{
     font-size: 14px;
   }
   .site-info__list{
@@ -967,6 +1028,12 @@ hr{
   }
   .site-info__number{
     margin-right: 15px;
+  }
+}
+@media (max-width: 400px){
+  .slider-photo,
+  .slider-photo__img{
+    width: 240px;
   }
 }
 @media (max-width: 356px){
