@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	AOS.init();
 	$(window).on('load', function(){
-		$('.loading').css("display" , "none")
+		$('.loading').fadeOut('slow');
 	})
 	
 	$('#nav-icon3').click(function(){
